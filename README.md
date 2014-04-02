@@ -24,7 +24,7 @@ It is probably convenient to map hotkey to toggle CapMark window. Add this into 
   
       nnoremap <F7> :CapmarkToggle<CR>
   
-Then you can press <F7> to hide or show CapMark window.
+Then you can press `<F7>` to hide or show CapMark window.
 
 ## License
 
