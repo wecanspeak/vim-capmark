@@ -1,0 +1,99 @@
+*CapMark.txt*    Dashboard of capital mark
+
+                       ~
+                   ______            __  ___           __      ~
+                  / ____/___ _____  /  |/  /___ ______/ /__    ~
+                 / /   / __ `/ __ \/ /|_/ / __ `/ ___/ //_/    ~
+                / /___/ /_/ / /_/ / /  / / /_/ / /  / ,<       ~
+                \____/\__,_/ .___/_/  /_/\__,_/_/  /_/|_|      ~
+                          /_/                                  ~
+        
+
+==============================================================================
+CONTENTS                                                    *capmark-contents*
+
+    1.Intro...................................|capmark|
+    2.Usage...................................|capmark-usage|
+    3.Credits.................................|capmark-credits|
+    4.License.................................|capmark-license|
+
+==============================================================================
+1. Intro                                                             *capmark*
+
+CapMark is a plugin for browsing capital marks and let you handle capital mark
+more friendly. It may look like:
+>
+                    mark  bookmark  file
+                    ----  --------  --------------
+                      A   todo 1    mark_test1.txt
+                      B   todo 2    mark_test1.txt
+                      C   note 0    mark_test1.txt
+                      K   note 1    mark_test2.txt
+                      Z   note 2    mark_test2.txt
+<
+
+You can add bookmark for each capital mark and quickveiw capital marks without 
+jumping to it. CapMark let you easily gain the overview of capital marks and 
+jump to desired mark precisely.
+
+==============================================================================
+2. Usage                                                       *capmark-usage*
+
+It is probably convenient to map hotkey to toggle CapMark window. Add this 
+into your |vimrc|:
+>
+         nnoremap <F7> :CapmarkToggle<CR>
+<
+Then you can press <F7> to hide or show CapMark window.
+
+------------------------------------------------------------------------------
+ACTIONS                                                       *capmark-action*
+
+In CapMark window, there are some action mapped via hotkeys.
+
+         b               Add bookmark
+         d               Remove bookmark
+         D               Reset all bookmarks
+         t               Jump to mark
+         <Enter>         Jump to mark
+         <C-N>           Traverse next mark
+         <C-P>           Traverse previous mark
+         R               Refresh capmark menu
+
+------------------------------------------------------------------------------
+COMMANDS                                                     *capmark-command*
+
+:CapmarkOpen                                                    *:CapmarkOpen*
+    Oepn the CapMark window if it is closed.
+
+:CapmarkClose                                                  *:CapmarkClose*
+    Close the CapMark window if it is opened.
+
+:CapmarkToggle                                                *:CapmarkToggle*
+    Oepn the CapMark window if it is closed, close it if it is opened.
+
+:CapmarkBookmarkReset                                  *:CapmarkBookmarkReset*
+    Reset all bookmark.
+
+:CapmarkMarkNext                                            *:CapmarkMarkNext*
+    Mark the next available mark on the current line. For example, 'A', 'B', 
+    'D' and 'E' marks are already used. After press >
+        :CapmarkMarkNext
+<   'C' mark is marked for current line.
+
+:CapmarkResetAll                                            *:CapmarkResetAll*
+    Reset all capital marks and bookmarks.
+
+==============================================================================
+3. Credits                                                   *capmark-credits*
+
+A great thanks to tagbar plugin that inspire some implementation idea.
+
+* Jan Larres for tagbar
+  http://majutsushi.github.io/tagbar/
+
+==============================================================================
+4. License                                                   *capmark-license*
+
+CapMark is MIT licensed.
+
